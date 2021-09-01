@@ -34,7 +34,9 @@ const Login = ()=>{
     <h2 id="headerTitle">{props.title}</h2>
 );
 
-
+const clickedbutton = () =>{
+  console.log("clicked");
+}
 const Form = props => (
    <div>
      <FormInput description="Username" placeholder="Enter your username" type="text" />
@@ -44,13 +46,13 @@ const Form = props => (
 );
 
 const FormButton = props => (
-  <div id="button" class="row">
-    <button>{props.title}</button>
+  <div id="button" className="row">
+    <button onClick={clickedbutton}>{props.title}</button>
   </div>
 );
 
 const FormInput = props => (
-  <div class="row">
+  <div className="row">
     <label>{props.description}</label>
     <input type={props.type} placeholder={props.placeholder}/>
   </div>  
