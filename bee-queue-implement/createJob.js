@@ -3,7 +3,7 @@ import queue from './queue.js'
 const enQueue = async (data) => {
     const job = await queue.createJob(data).save();
 
-    // console.log();
+    console.log("Error in creating Job with data: ",data);
     job.on('succeeded',(job,result) => {
         console.log("done");
     })
